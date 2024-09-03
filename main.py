@@ -4,9 +4,9 @@ class Driver():
     def __init__(self, name, rating, team) -> None:
         self.rating = rating
         self.name = name
-        self.driverInFront = 0
         self.gapToCarInFront = 0.2
         self.team = team
+        self.ovrTime = 0
 
 class Team():
     def __init__(self, name, performance) -> None:
@@ -46,7 +46,7 @@ stroll = Driver("Lance Stroll", 56, astonMartin)
 #Williams
 williams = Team("Williams", 44)
 albon = Driver("Alexander Albon", 52, williams)
-colapinto = Driver("Franco Colapinto", 48, williams)
+colapinto = Driver("Franco Colapinto", 4, williams)
 
 
 #Haas 
@@ -74,12 +74,10 @@ zhou = Driver("Guanyu Zhou", 1, sauber)
 
 
 teams = [redBull, mclaren, ferrari, mercedes, astonMartin, williams, haas, alpine, vcarb, sauber]
-drivers = {"Max Verstappen" : verstappen, "Sergio Perez" : perez, "Lando Norris" : norris, "Oscar Piastri" : piastri, "Charles Leclerc" : leclerc,
-           "Carlos Sainz" : sainz, "Lewis Hamilton" : hamilton, "George Russell" : russell, "Fernando Alonso" : alonso, "Lance Stroll" : stroll,
-           "Alexander Albon" : albon, "Franco Colapinto" : colapinto, "Kevin Magnussen" : magnussen, "Nico Hulkenberg" : hulkenberg, "Pierre Gasly" : gasly,
-           "Esteban Ocon" : ocon, "Yuki Tsunoda" : tsunoda, "Daniel Ricciardo" : ricciardo, "Valtteri Bottas" : bottas, "Guanyu Zhou": zhou}
+drivers = [verstappen, perez, norris, piastri, leclerc, sainz, hamilton, russell, alonso, stroll, albon, colapinto, magnussen, hulkenberg, gasly, ocon,
+           tsunoda, ricciardo, bottas, zhou]
 
 
-bahrain = Race("Bahrain", 57, 92)
+bahrain = Race("Bahrain", 57, 94)
 
 bahrain.simulateRace(drivers)
