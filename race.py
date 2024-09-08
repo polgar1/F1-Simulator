@@ -16,6 +16,7 @@ class Race():
             print(f"Lap {i}/{self.laps}")
 
             driverIndex = 0
+            drivers.sort(key=lambda d: d.ovrTime)
             for driver in drivers:
                 if i == 1:
                     driver.lapsOfFuelRemaining = self.laps
@@ -27,10 +28,9 @@ class Race():
                     driver.gapToCarInFront = 0.0
 
                 print(f"{drivers.index(driver)+1}. {driver.name} : {x} : {driver.gapToCarInFront:.4}")
-                driver.gapToCarInFront = drivers
                 
                 driverIndex += 1
-            drivers.sort(key=lambda d: d.ovrTime)
+            
 
 
     
